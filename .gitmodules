@@ -1,0 +1,4 @@
+[submodule "android_something"]
+	path = android_something
+	url = https://github.com/Lisenko-Valeria/android_something.git
+	branch = branch_zmq

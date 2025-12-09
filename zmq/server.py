@@ -1,8 +1,8 @@
-'''
+
 python3 -m venv venv
 source venv/bin/activate
 pip install pyzmq
-'''
+
 
 import zmq
 import json
@@ -11,7 +11,7 @@ from datetime import datetime
 import threading
 
 class ZMQServer:
-    def __init__(self, port=5555, log_file="android_messages.log"):
+    def __init__(self, port=5556, log_file="android_messages.log"):
         self.port = port
         self.log_file = log_file
         self.packet_count = 0
@@ -106,7 +106,7 @@ class ZMQServer:
         print("[SERVER] Остановлен")
 
 def main():
-    server = ZMQServer(port=5555)
+    server = ZMQServer(port=5556)
     
     # Запуск сервера в отдельном потоке
     server_thread = threading.Thread(target=server.start)
