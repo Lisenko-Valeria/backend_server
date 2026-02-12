@@ -1,7 +1,7 @@
 [submodule "android_something"]
 	path = android_something
 	url = https://github.com/Lisenko-Valeria/android_something.git
-	branch = master
+	branch = branch_zmq
 
 [submodule "external/imgui"]
 	path = external/imgui
