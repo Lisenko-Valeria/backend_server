@@ -1,0 +1,6 @@
+# CMake generated Testfile for 
+# Source directory: /home/valeria/sem4/visual/backend_server/lab9/build/_deps/catch2-src/src
+# Build directory: /home/valeria/sem4/visual/backend_server/lab9/build/_deps/catch2-build/src
+# 
+# This file includes the relevant testing commands required for 
+# testing this directory and lists subdirectories to be tested as well.
