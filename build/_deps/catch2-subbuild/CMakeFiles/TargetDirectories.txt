@@ -1,3 +1,0 @@
-/home/valeria/sem4/visual/backend_server/lab9/build/_deps/catch2-subbuild/CMakeFiles/catch2-populate.dir
-/home/valeria/sem4/visual/backend_server/lab9/build/_deps/catch2-subbuild/CMakeFiles/edit_cache.dir
-/home/valeria/sem4/visual/backend_server/lab9/build/_deps/catch2-subbuild/CMakeFiles/rebuild_cache.dir

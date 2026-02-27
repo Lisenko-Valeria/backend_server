@@ -1,5 +1,0 @@
-if(EXISTS "/home/valeria/sem4/visual/backend_server/lab9/build/external/cppzmq/tests/unit_tests-b12d07c_tests.cmake")
-  include("/home/valeria/sem4/visual/backend_server/lab9/build/external/cppzmq/tests/unit_tests-b12d07c_tests.cmake")
-else()
-  add_test(unit_tests_NOT_BUILT-b12d07c unit_tests_NOT_BUILT-b12d07c)
-endif()

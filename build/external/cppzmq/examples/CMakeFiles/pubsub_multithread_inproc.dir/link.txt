@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/pubsub_multithread_inproc.dir/pubsub_multithread_inproc.cpp.o -o ../../../bin/pubsub_multithread_inproc  /usr/lib/x86_64-linux-gnu/libzmq.so 
