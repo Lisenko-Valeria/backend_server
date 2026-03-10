@@ -15,6 +15,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/valeria/sem4/visual/backend_server/external/imgui/imgui_draw.cpp" "CMakeFiles/lab9.dir/external/imgui/imgui_draw.cpp.o" "gcc" "CMakeFiles/lab9.dir/external/imgui/imgui_draw.cpp.o.d"
   "/home/valeria/sem4/visual/backend_server/external/imgui/imgui_tables.cpp" "CMakeFiles/lab9.dir/external/imgui/imgui_tables.cpp.o" "gcc" "CMakeFiles/lab9.dir/external/imgui/imgui_tables.cpp.o.d"
   "/home/valeria/sem4/visual/backend_server/external/imgui/imgui_widgets.cpp" "CMakeFiles/lab9.dir/external/imgui/imgui_widgets.cpp.o" "gcc" "CMakeFiles/lab9.dir/external/imgui/imgui_widgets.cpp.o.d"
+  "/home/valeria/sem4/visual/backend_server/external/implot/implot.cpp" "CMakeFiles/lab9.dir/external/implot/implot.cpp.o" "gcc" "CMakeFiles/lab9.dir/external/implot/implot.cpp.o.d"
+  "/home/valeria/sem4/visual/backend_server/external/implot/implot_items.cpp" "CMakeFiles/lab9.dir/external/implot/implot_items.cpp.o" "gcc" "CMakeFiles/lab9.dir/external/implot/implot_items.cpp.o.d"
   "/home/valeria/sem4/visual/backend_server/src/gui_app.cpp" "CMakeFiles/lab9.dir/src/gui_app.cpp.o" "gcc" "CMakeFiles/lab9.dir/src/gui_app.cpp.o.d"
   "/home/valeria/sem4/visual/backend_server/src/main.cpp" "CMakeFiles/lab9.dir/src/main.cpp.o" "gcc" "CMakeFiles/lab9.dir/src/main.cpp.o.d"
   "/home/valeria/sem4/visual/backend_server/src/zmq_server.cpp" "CMakeFiles/lab9.dir/src/zmq_server.cpp.o" "gcc" "CMakeFiles/lab9.dir/src/zmq_server.cpp.o.d"

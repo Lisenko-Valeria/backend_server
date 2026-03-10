@@ -174,6 +174,7 @@ CMakeFiles/lab9.dir/src/gui_app.cpp.o: \
  /home/valeria/sem4/visual/backend_server/external/imgui/imconfig.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h /usr/include/string.h \
  /usr/include/strings.h /usr/include/assert.h \
+ /home/valeria/sem4/visual/backend_server/external/implot/implot.h \
  /home/valeria/sem4/visual/backend_server/external/imgui/backends/imgui_impl_sdl2.h \
  /home/valeria/sem4/visual/backend_server/external/imgui/backends/imgui_impl_opengl3.h \
  /usr/include/GL/glew.h /usr/include/GL/glu.h /usr/include/GL/gl.h \
@@ -320,4 +321,11 @@ CMakeFiles/lab9.dir/src/gui_app.cpp.o: \
  /usr/include/SDL2/SDL_render.h /usr/include/SDL2/SDL_shape.h \
  /usr/include/SDL2/SDL_system.h /usr/include/SDL2/SDL_timer.h \
  /usr/include/SDL2/SDL_version.h /usr/include/SDL2/SDL_locale.h \
- /usr/include/SDL2/SDL_misc.h
+ /usr/include/SDL2/SDL_misc.h /usr/include/c++/13/algorithm \
+ /usr/include/c++/13/bits/stl_algo.h \
+ /usr/include/c++/13/bits/algorithmfwd.h \
+ /usr/include/c++/13/bits/stl_heap.h \
+ /usr/include/c++/13/bits/uniform_int_dist.h \
+ /usr/include/c++/13/bits/stl_tempbuf.h \
+ /usr/include/c++/13/pstl/glue_algorithm_defs.h \
+ /usr/include/c++/13/pstl/execution_defs.h

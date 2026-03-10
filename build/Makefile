@@ -297,6 +297,54 @@ external/imgui/imgui_widgets.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab9.dir/build.make CMakeFiles/lab9.dir/external/imgui/imgui_widgets.cpp.s
 .PHONY : external/imgui/imgui_widgets.cpp.s
 
+external/implot/implot.o: external/implot/implot.cpp.o
+.PHONY : external/implot/implot.o
+
+# target to build an object file
+external/implot/implot.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab9.dir/build.make CMakeFiles/lab9.dir/external/implot/implot.cpp.o
+.PHONY : external/implot/implot.cpp.o
+
+external/implot/implot.i: external/implot/implot.cpp.i
+.PHONY : external/implot/implot.i
+
+# target to preprocess a source file
+external/implot/implot.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab9.dir/build.make CMakeFiles/lab9.dir/external/implot/implot.cpp.i
+.PHONY : external/implot/implot.cpp.i
+
+external/implot/implot.s: external/implot/implot.cpp.s
+.PHONY : external/implot/implot.s
+
+# target to generate assembly for a file
+external/implot/implot.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab9.dir/build.make CMakeFiles/lab9.dir/external/implot/implot.cpp.s
+.PHONY : external/implot/implot.cpp.s
+
+external/implot/implot_items.o: external/implot/implot_items.cpp.o
+.PHONY : external/implot/implot_items.o
+
+# target to build an object file
+external/implot/implot_items.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab9.dir/build.make CMakeFiles/lab9.dir/external/implot/implot_items.cpp.o
+.PHONY : external/implot/implot_items.cpp.o
+
+external/implot/implot_items.i: external/implot/implot_items.cpp.i
+.PHONY : external/implot/implot_items.i
+
+# target to preprocess a source file
+external/implot/implot_items.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab9.dir/build.make CMakeFiles/lab9.dir/external/implot/implot_items.cpp.i
+.PHONY : external/implot/implot_items.cpp.i
+
+external/implot/implot_items.s: external/implot/implot_items.cpp.s
+.PHONY : external/implot/implot_items.s
+
+# target to generate assembly for a file
+external/implot/implot_items.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab9.dir/build.make CMakeFiles/lab9.dir/external/implot/implot_items.cpp.s
+.PHONY : external/implot/implot_items.cpp.s
+
 src/gui_app.o: src/gui_app.cpp.o
 .PHONY : src/gui_app.o
 
@@ -399,6 +447,12 @@ help:
 	@echo "... external/imgui/imgui_widgets.o"
 	@echo "... external/imgui/imgui_widgets.i"
 	@echo "... external/imgui/imgui_widgets.s"
+	@echo "... external/implot/implot.o"
+	@echo "... external/implot/implot.i"
+	@echo "... external/implot/implot.s"
+	@echo "... external/implot/implot_items.o"
+	@echo "... external/implot/implot_items.i"
+	@echo "... external/implot/implot_items.s"
 	@echo "... src/gui_app.o"
 	@echo "... src/gui_app.i"
 	@echo "... src/gui_app.s"

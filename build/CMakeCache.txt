@@ -278,6 +278,9 @@ PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 //The directory containing a CMake configuration file for SDL2.
 SDL2_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/SDL2
 
+//The directory containing a CMake configuration file for implot.
+implot_DIR:PATH=implot_DIR-NOTFOUND
+
 //Value Computed by CMake
 lab9_BINARY_DIR:STATIC=/home/valeria/sem4/visual/backend_server/build
 

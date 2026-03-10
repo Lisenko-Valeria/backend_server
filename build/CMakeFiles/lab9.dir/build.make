@@ -209,6 +209,34 @@ CMakeFiles/lab9.dir/external/imgui/imgui_widgets.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lab9.dir/external/imgui/imgui_widgets.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/valeria/sem4/visual/backend_server/external/imgui/imgui_widgets.cpp -o CMakeFiles/lab9.dir/external/imgui/imgui_widgets.cpp.s
 
+CMakeFiles/lab9.dir/external/implot/implot.cpp.o: CMakeFiles/lab9.dir/flags.make
+CMakeFiles/lab9.dir/external/implot/implot.cpp.o: /home/valeria/sem4/visual/backend_server/external/implot/implot.cpp
+CMakeFiles/lab9.dir/external/implot/implot.cpp.o: CMakeFiles/lab9.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/valeria/sem4/visual/backend_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/lab9.dir/external/implot/implot.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab9.dir/external/implot/implot.cpp.o -MF CMakeFiles/lab9.dir/external/implot/implot.cpp.o.d -o CMakeFiles/lab9.dir/external/implot/implot.cpp.o -c /home/valeria/sem4/visual/backend_server/external/implot/implot.cpp
+
+CMakeFiles/lab9.dir/external/implot/implot.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lab9.dir/external/implot/implot.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/valeria/sem4/visual/backend_server/external/implot/implot.cpp > CMakeFiles/lab9.dir/external/implot/implot.cpp.i
+
+CMakeFiles/lab9.dir/external/implot/implot.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lab9.dir/external/implot/implot.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/valeria/sem4/visual/backend_server/external/implot/implot.cpp -o CMakeFiles/lab9.dir/external/implot/implot.cpp.s
+
+CMakeFiles/lab9.dir/external/implot/implot_items.cpp.o: CMakeFiles/lab9.dir/flags.make
+CMakeFiles/lab9.dir/external/implot/implot_items.cpp.o: /home/valeria/sem4/visual/backend_server/external/implot/implot_items.cpp
+CMakeFiles/lab9.dir/external/implot/implot_items.cpp.o: CMakeFiles/lab9.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/valeria/sem4/visual/backend_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/lab9.dir/external/implot/implot_items.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab9.dir/external/implot/implot_items.cpp.o -MF CMakeFiles/lab9.dir/external/implot/implot_items.cpp.o.d -o CMakeFiles/lab9.dir/external/implot/implot_items.cpp.o -c /home/valeria/sem4/visual/backend_server/external/implot/implot_items.cpp
+
+CMakeFiles/lab9.dir/external/implot/implot_items.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lab9.dir/external/implot/implot_items.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/valeria/sem4/visual/backend_server/external/implot/implot_items.cpp > CMakeFiles/lab9.dir/external/implot/implot_items.cpp.i
+
+CMakeFiles/lab9.dir/external/implot/implot_items.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lab9.dir/external/implot/implot_items.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/valeria/sem4/visual/backend_server/external/implot/implot_items.cpp -o CMakeFiles/lab9.dir/external/implot/implot_items.cpp.s
+
 # Object files for target lab9
 lab9_OBJECTS = \
 "CMakeFiles/lab9.dir/src/main.cpp.o" \
@@ -220,7 +248,9 @@ lab9_OBJECTS = \
 "CMakeFiles/lab9.dir/external/imgui/imgui_demo.cpp.o" \
 "CMakeFiles/lab9.dir/external/imgui/imgui_draw.cpp.o" \
 "CMakeFiles/lab9.dir/external/imgui/imgui_tables.cpp.o" \
-"CMakeFiles/lab9.dir/external/imgui/imgui_widgets.cpp.o"
+"CMakeFiles/lab9.dir/external/imgui/imgui_widgets.cpp.o" \
+"CMakeFiles/lab9.dir/external/implot/implot.cpp.o" \
+"CMakeFiles/lab9.dir/external/implot/implot_items.cpp.o"
 
 # External object files for target lab9
 lab9_EXTERNAL_OBJECTS =
@@ -235,6 +265,8 @@ lab9: CMakeFiles/lab9.dir/external/imgui/imgui_demo.cpp.o
 lab9: CMakeFiles/lab9.dir/external/imgui/imgui_draw.cpp.o
 lab9: CMakeFiles/lab9.dir/external/imgui/imgui_tables.cpp.o
 lab9: CMakeFiles/lab9.dir/external/imgui/imgui_widgets.cpp.o
+lab9: CMakeFiles/lab9.dir/external/implot/implot.cpp.o
+lab9: CMakeFiles/lab9.dir/external/implot/implot_items.cpp.o
 lab9: CMakeFiles/lab9.dir/build.make
 lab9: /usr/lib/x86_64-linux-gnu/libSDL2.so
 lab9: /usr/lib/x86_64-linux-gnu/libOpenGL.so
@@ -242,7 +274,7 @@ lab9: /usr/lib/x86_64-linux-gnu/libGLX.so
 lab9: /usr/lib/x86_64-linux-gnu/libGLU.so
 lab9: /usr/lib/x86_64-linux-gnu/libGLEW.so
 lab9: CMakeFiles/lab9.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/valeria/sem4/visual/backend_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable lab9"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/valeria/sem4/visual/backend_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable lab9"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lab9.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
