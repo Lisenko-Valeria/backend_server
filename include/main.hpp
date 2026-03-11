@@ -9,6 +9,8 @@
 #include<vector>
 using namespace std;
 
+const int MAX_HISTORY = 100; 
+
 struct location {  
     string readable_time;
     float latitude = 0.0;   
@@ -38,6 +40,24 @@ struct location {
     atomic<bool> server_stop{false};
 
     mutex location_mutex; 
+
+    vector<float> asu_level_history;      
+    vector<float> cqi_history;            
+    vector<float> rsrp_history;          
+    vector<float> rsrq_history;            
+    vector<float> rssi_history;           
+    vector<float> rssnr_history;           
+    vector<float> timing_advance_history;  
+    
+    float current_asu_level = -999;
+    float current_cqi = -999;
+    float current_rsrp = -999;
+    float current_rsrq = -999;
+    float current_rssi = -999;
+    float current_rssnr = -999;
+    float current_timing_advance = -999;
+    
+    atomic<bool> new_signal_data{false};
 };
 
 void run_gui(location *loc);    

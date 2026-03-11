@@ -5,8 +5,6 @@
 
 using json = nlohmann::json;
 
-
-    
 static void save_as_json_array(const string& new_json) {
     static mutex file_mutex;
     lock_guard<mutex> lock(file_mutex);
@@ -21,7 +19,6 @@ static void save_as_json_array(const string& new_json) {
         cerr << "[SERVER] Error: Could not open location_data.jsonl for writing" << endl;
     }
 }
-
 
 float extract_float_from_json(const json& j, const string& key) {
     if (j.contains(key) && !j[key].is_null()) {
@@ -42,7 +39,6 @@ void run_server(location *loc) {
         socket.bind("tcp://*:4789");
         cout << "[SERVER] Listening on tcp://*:4789" << endl;
         
-        
         while (!loc->server_stop) {
             zmq::message_t request;
             
@@ -53,7 +49,7 @@ void run_server(location *loc) {
                 socket.recv(request, zmq::recv_flags::none);
                 
                 std::string message(static_cast<char*>(request.data()), request.size());
-                std::cout << "[SERVER] Received: " << message << std::endl;
+                std::cout << "[SERVER] Received message from android "<< std::endl;
                 
                 try {
                     json j = json::parse(message);
@@ -64,9 +60,9 @@ void run_server(location *loc) {
                     lock_guard<mutex> lock(loc->location_mutex);
 
                     if (j.contains("readable_time")) {
-                        loc->readable_time = j["readable_time"].get<string>();}
+                        loc->readable_time = j["readable_time"].get<string>();
+                    }
 
-                    
                     if (j.contains("location") && !j["location"].is_null()) {
                         auto& loc_json = j["location"];
                         loc->latitude = loc_json.value("latitude", 0.0f);
@@ -96,13 +92,13 @@ void run_server(location *loc) {
                     loc->cell_rssnr.clear();
                     loc->cell_timing_advance.clear();
 
-
                     if (j.contains("cell_info") && j["cell_info"].contains("cells")) {
                         auto& cells = j["cell_info"]["cells"];
                         loc->cell_count = cells.size();
                         
                         for (auto& cell : cells) {
-                            loc->cell_types.push_back(cell.value("type", "Unknown"));
+                            string cell_type = cell.value("type", "Unknown");
+                            loc->cell_types.push_back(cell_type);
                             
                             if (cell.contains("identity")) {
                                 auto& id = cell["identity"];
@@ -122,15 +118,25 @@ void run_server(location *loc) {
                                 loc->cell_pci.push_back(0);
                                 loc->cell_tac.push_back(0);
                             }
+                            
                             if (cell.contains("signal")) {
                                 auto& sig = cell["signal"];
-                                loc->cell_asu_level.push_back(sig.value("asu_level", 0));
-                                loc->cell_cqi.push_back(sig.value("cqi", 0));
-                                loc->cell_rsrp.push_back(sig.value("rsrp", 0));
-                                loc->cell_rsrq.push_back(sig.value("rsrq", 0));
-                                loc->cell_rssi.push_back(sig.value("rssi", 0));
-                                loc->cell_rssnr.push_back(sig.value("rssnr", 0));
-                                loc->cell_timing_advance.push_back(sig.value("timing_advance", 0));
+                                
+                                int asu = sig.value("asu_level", 0);
+                                int cqi = sig.value("cqi", 0);
+                                int rsrp = sig.value("rsrp", 0);
+                                int rsrq = sig.value("rsrq", 0);
+                                int rssi = sig.value("rssi", 0);
+                                int rssnr = sig.value("rssnr", 0);
+                                int timing = sig.value("timing_advance", 0);
+                                
+                                loc->cell_asu_level.push_back(asu);
+                                loc->cell_cqi.push_back(cqi);
+                                loc->cell_rsrp.push_back(rsrp);
+                                loc->cell_rsrq.push_back(rsrq);
+                                loc->cell_rssi.push_back(rssi);
+                                loc->cell_rssnr.push_back(rssnr);
+                                loc->cell_timing_advance.push_back(timing);
                             } else {
                                 loc->cell_asu_level.push_back(0);
                                 loc->cell_cqi.push_back(0);
@@ -143,11 +149,61 @@ void run_server(location *loc) {
                         }
                     }
 
+                    if (loc->cell_count > 0) {
+                        if (loc->cell_asu_level.size() > 0) {
+                            loc->asu_level_history.push_back(loc->cell_asu_level[0]);
+                            loc->current_asu_level = loc->cell_asu_level[0];
+                        }                        
+                        if (loc->cell_cqi.size() > 0) {
+                            loc->cqi_history.push_back(loc->cell_cqi[0]);
+                            loc->current_cqi = loc->cell_cqi[0];
+                        }
+                        if (loc->cell_rsrp.size() > 0) {
+                            loc->rsrp_history.push_back(loc->cell_rsrp[0]);
+                            loc->current_rsrp = loc->cell_rsrp[0];
+                        }
+                        if (loc->cell_rsrq.size() > 0) {
+                            loc->rsrq_history.push_back(loc->cell_rsrq[0]);
+                            loc->current_rsrq = loc->cell_rsrq[0];
+                        }
+                        if (loc->cell_rssi.size() > 0) {
+                            loc->rssi_history.push_back(loc->cell_rssi[0]);
+                            loc->current_rssi = loc->cell_rssi[0];
+                        }
+                        if (loc->cell_rssnr.size() > 0) {
+                            loc->rssnr_history.push_back(loc->cell_rssnr[0]);
+                            loc->current_rssnr = loc->cell_rssnr[0];
+                        }
+                        if (loc->cell_timing_advance.size() > 0) {
+                            loc->timing_advance_history.push_back(loc->cell_timing_advance[0]);
+                            loc->current_timing_advance = loc->cell_timing_advance[0];
+                        }
+
+
+
+
+                        if (loc->asu_level_history.size() > MAX_HISTORY)
+                            loc->asu_level_history.erase(loc->asu_level_history.begin());
+                        if (loc->cqi_history.size() > MAX_HISTORY)
+                            loc->cqi_history.erase(loc->cqi_history.begin());
+                        if (loc->rsrp_history.size() > MAX_HISTORY)
+                            loc->rsrp_history.erase(loc->rsrp_history.begin());
+                        if (loc->rsrq_history.size() > MAX_HISTORY)
+                            loc->rsrq_history.erase(loc->rsrq_history.begin());
+                        if (loc->rssi_history.size() > MAX_HISTORY)
+                            loc->rssi_history.erase(loc->rssi_history.begin());
+                        if (loc->rssnr_history.size() > MAX_HISTORY)
+                            loc->rssnr_history.erase(loc->rssnr_history.begin());
+                        if (loc->timing_advance_history.size() > MAX_HISTORY)
+                            loc->timing_advance_history.erase(loc->timing_advance_history.begin());
+                    }
+
                     loc->timestamp = std::chrono::system_clock::now();
                     loc->new_data = true;
+                    loc->new_signal_data = true;
+                    
                     ///////////////////////////////////////////
-                    cout << "[SERVER] Parsed: " << loc->latitude 
-                              << ", " << loc->longitude << endl;
+                    cout << "[SERVER] Parsed: " << loc->latitude << ", " << loc->longitude << endl;
                     
                     string response = "Локация получена";
                     zmq::message_t reply(response.size());

@@ -30,11 +30,15 @@ file(GLOB IMGUI_SOURCES ${EXTERNAL_DIR}/imgui/*.cpp
                         ${EXTERNAL_DIR}/imgui/backends/imgui_impl_sdl2.cpp
                         ${EXTERNAL_DIR}/imgui/backends/imgui_impl_opengl3.cpp)
 
+file(GLOB IMPLOT_SOURCES ${EXTERNAL_DIR}/implot/implot.cpp
+                         ${EXTERNAL_DIR}/implot/implot_items.cpp)
+
 # Исполняемый файл 
 add_executable(lab9 ${SRC_DIR}/main.cpp
                     ${SRC_DIR}/gui_app.cpp
-                    ${SRC_DIR}/zmq_server.cpp  # Только .cpp файл
-                    ${IMGUI_SOURCES})
+                    ${SRC_DIR}/zmq_server.cpp  
+                    ${IMGUI_SOURCES}
+                    ${IMPLOT_SOURCES})
 
 # Подключение библиотек
 target_link_libraries(lab9 ${SDL2_LIBRARIES}

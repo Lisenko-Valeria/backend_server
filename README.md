@@ -1,0 +1,1 @@
+![alt text](/home/valeria/sem4/visual/backend_server/image/графики.png)
