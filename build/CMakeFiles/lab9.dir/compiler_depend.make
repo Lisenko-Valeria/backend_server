@@ -2010,6 +2010,7 @@ CMakeFiles/lab9.dir/src/gui_app.cpp.o: /home/valeria/sem4/visual/backend_server/
   /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
   /usr/include/c++/13/bits/specfun.h \
+  /usr/include/c++/13/bits/sstream.tcc \
   /usr/include/c++/13/bits/std_abs.h \
   /usr/include/c++/13/bits/std_mutex.h \
   /usr/include/c++/13/bits/std_thread.h \
@@ -2072,6 +2073,7 @@ CMakeFiles/lab9.dir/src/gui_app.cpp.o: /home/valeria/sem4/visual/backend_server/
   /usr/include/c++/13/pstl/glue_algorithm_defs.h \
   /usr/include/c++/13/pstl/pstl_config.h \
   /usr/include/c++/13/ratio \
+  /usr/include/c++/13/sstream \
   /usr/include/c++/13/stdexcept \
   /usr/include/c++/13/stdlib.h \
   /usr/include/c++/13/streambuf \
@@ -2931,8 +2933,6 @@ CMakeFiles/lab9.dir/src/zmq_server.cpp.o: /home/valeria/sem4/visual/backend_serv
 
 /usr/include/c++/13/unordered_map:
 
-/usr/include/c++/13/sstream:
-
 /usr/include/c++/13/pstl/glue_numeric_defs.h:
 
 /usr/include/c++/13/optional:
@@ -2983,8 +2983,6 @@ CMakeFiles/lab9.dir/src/zmq_server.cpp.o: /home/valeria/sem4/visual/backend_serv
 
 /usr/include/c++/13/bits/std_function.h:
 
-/usr/include/c++/13/bits/sstream.tcc:
-
 /usr/include/c++/13/bits/slice_array.h:
 
 /usr/include/c++/13/bits/shared_ptr.h:
@@ -2996,6 +2994,8 @@ CMakeFiles/lab9.dir/src/zmq_server.cpp.o: /home/valeria/sem4/visual/backend_serv
 /usr/include/c++/13/bits/mask_array.h:
 
 /usr/include/c++/13/bits/locale_facets_nonio.h:
+
+/usr/include/c++/13/bits/indirect_array.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/mwaitxintrin.h:
 
@@ -3066,8 +3066,6 @@ CMakeFiles/lab9.dir/src/zmq_server.cpp.o: /home/valeria/sem4/visual/backend_serv
 /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512bitalgintrin.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/avx5124vnniwintrin.h:
-
-/usr/include/c++/13/bits/indirect_array.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/emmintrin.h:
 
@@ -3460,6 +3458,8 @@ CMakeFiles/lab9.dir/src/zmq_server.cpp.o: /home/valeria/sem4/visual/backend_serv
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
 /home/valeria/sem4/visual/backend_server/external/json/include/nlohmann/detail/meta/call_std/end.hpp:
+
+/usr/include/c++/13/sstream:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h:
 
@@ -3881,6 +3881,8 @@ CMakeFiles/lab9.dir/src/zmq_server.cpp.o: /home/valeria/sem4/visual/backend_serv
 
 /usr/include/c++/13/bits/refwrap.h:
 
+/usr/include/c++/13/bits/sstream.tcc:
+
 /usr/include/c++/13/bits/stl_algo.h:
 
 /usr/include/SDL2/begin_code.h:
@@ -4037,9 +4039,9 @@ CMakeFiles/lab9.dir/src/zmq_server.cpp.o: /home/valeria/sem4/visual/backend_serv
 
 /home/valeria/sem4/visual/backend_server/external/json/include/nlohmann/json.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
-
 /usr/include/c++/13/bits/locale_conv.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 
 /home/valeria/sem4/visual/backend_server/external/json/include/nlohmann/adl_serializer.hpp:
 
